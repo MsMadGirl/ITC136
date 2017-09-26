@@ -1,0 +1,11 @@
+Notes
+
+9/25/2017
+Documenting a new VM:
+
+Network > srv12 > File Share > Disc Images >Linux OS's > Ubuntu > Desktop > 14 > 64 > 14.04
+Copy to desktop
+Open VMWare
+Open new virtual machine
+Tell it to use the Ubuntu iso
+Standard setup
