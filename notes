@@ -1,4 +1,4 @@
-Notes
+/9Notes
 
 9/25/2017
 Documenting a new VM:
@@ -10,3 +10,26 @@ Open new virtual machine
 Tell it to use the Ubuntu iso
 Standard setup
 
+9/27/2017
+
+shell/CLI - command line interface, allows user to interact with hardware
+shell is also a command language interpreter that executes commands read for the standard input device
+prompt
+pwd  print working directory
+/etc/    top level directory, contains files to configure the system
+sudo  superuser do (do as superuser)
+apt-get  advanced package tool, front end tool for dpkg, Debian package management tool
+finger  find out information about users
+pinky  lightweight finger
+dependency  use package management systems to do dependency checking
+dpkg -L  to get list of file locations
+dpkg -ql  for locations of application files
+apt-get update   update list of available packages when using dpkg
+apt-cache depends package    list dependencies of dpkg package
+dpkg -purge   will completely remove files including config
+etc/apt/sources.list   file edited to select network locations from which installation packages are loaded
+dpkg-reconfigure   asks config questions for specific installed package as if it were being installed for the first time
+command -parameter -option -switch /directory/file
+  all are case sensitive
+type - tells you if it's an internal or external command
+apropos - lets you search man pages
