@@ -33,3 +33,114 @@ command -parameter -option -switch /directory/file
   all are case sensitive
 type - tells you if it's an internal or external command
 apropos - lets you search man pages
+
+10/4/17
+
+(Nicole's notes)
+To do:
+Send email for slack channel braindumps for our tests ctrl f search the PDF
+Find a good linux terminal or set up a vm
+
+Know the difference between internal and external command!
+Why would you care?
+echo $PATH try this and paste what you see
+
+
+ls  means list  as in list of files
+ls -l means long and list more information
+ls -la shows all files including hidden ones
+ls -lA excludes dot files for security measures
+man ls look up correct syntax
+less displays text for you to read. Use q to exit
+
+There are 8 sections to the man pages. (manual)
+1 user commands
+2 kernel system calls
+3 library calls - a library code that can be reused over and over
+4 device files,nodes, and driers for all your hardware in your system /dev  cd /dev
+5 file formats
+6 games, screen savers
+7 misc macros (little scripts)
+8 sysadmin commands used only by root
+
+$man 5 passwd file format of passwd file 
+$apropos display appropriate commands
+$man -k  is apropos gives you system info (same as above)
+know internal commands
+cd 
+pwd 
+echo prints text on screen
+exec
+time
+set
+exit
+logout
+uname tells you info on kernel and hostname 
+type -a pwd
+
+Type will tell you if an command is internal or external
+./filename execute the file in the current directory (be careful) don’t need path don’t use it.
+
+Absolute path/blah/blah
+Relative path begins with . or ..(shortcut)
+.. is the parent of your working directory
+Shortcuts only go up directory
+To go down you must use absolute path
+
+Two easy ways to get back to your homedir!
+cd $HOME
+cd (enter)
+spooled (look this up)
+Know the top level directories!
+
+Command completion: type and hit tab
+Maximum filename length is 255 (remember this)
+$history can show you (limit 500 by default)
+$history | tail will show last 10 lines by default (pipeline) (~/.base_history)
+$history 30 shows last 30 commands
+$!297 executes the command at #297
+$history -c clears history to clear passwords etc
+$!! Shows the last command like the up arrow (! is called bang) (check this)google
+
+Tip! Review the keyboard shortcut keys for the linux test
+
+
+10/9/17
+
+User account based security - 2 types of users
+regular user ($): created by default when Ubuntu is installed
+superuser privileges (#): root in most distros, disabled in Ubuntu
+  *Ubuntu - first user created - superuser privileges
+  *To make system-wide change, enter sudo and your password
+  *For superuser privileges throughout a session, $sudo -i (allows limited superuser privileges to specific users)
+  *to return to regular user prompt, type exit & enter
+Most flavors of Linus use su to switch users
+  *To become root, enter root password, or password of other user
+  *$sudo bash -  become root for single cmd - use your password
+  *whoami
+  *su temporarily switches you to a new shell. If no name specified, you become root user account &  requires root user's pword (exit returns your shell to regular prompt)
+
+config files are plain-text
+bash configs are shell scripts
+~/.bashrc & ~/.profile main user config files for bash
+/etc/bash.bashrc & /etc/profile main global config files
+May add dirs to $PATH environmental variable(colon-delimited)
+Backup files (xxx.old) before making any changes
+Test changes by logging into another virtual terminal
+Variable are given names & stores temporarily in memory
+When you close terminal window or shell, are variables are lost
+System automatically recreates many variables when new shell is opened
+
+~ is home directory
+/ is root directory
+
+rc stands for resource configuration
+when editing .bashrc, comment things out
+
+Two types of variable used to bash shell:
+Environmental variables (ex: PATH and HOME) - used by bash when interpreting commands and performing tasks
+Local variables are often associated with used-based tasks
+
+
+
+
