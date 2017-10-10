@@ -1,0 +1,21 @@
+A virtual machine is just like a physical machine, except that the hardware it runs on is being simulated by the hardware of the physical machine. It's a machine inside a machine.
+
+Make sure you have a file that begins with "ubuntu" and ends with ".iso"; this is a disk image file, which contains all of the information you need about an operating system for a computer to run it. If you don't have it, borrow a thumb drive that has a copy, find it on the thumb drive, and drag-and-drop it to your desktop.
+
+Open VMWare. You can do this by going to the Windows menu and typing it in. You probably want to pin it to the taskbar.
+
+Click on "Create New Virtual Machine". 
+
+This screen asks if you want a Typical or Custom configuration. Typical is fine. Click "Next".
+
+This screen asks where you want to install from. Select "Installer disk image file (iso)", click browse, navigate to the desktop, and select the ISO you just copied. Click "Next".
+
+This screen asks you to personalize Linux. Type in your full name, a short user name, and a password (twice). Click "Next".
+
+This screen asks you to name the virtual machine. If you are using multiple virtual machines, you may wish to name this one something recognizable. If so, type that now, then click "Next". If not, just click "Next".
+
+This screen asks about disk size and division. The default settings are correct. Click "Next".
+
+This screen lists settings. Click "Finish".
+
+The virtual machine should now open automatically. If it doesn't, find "Ubuntu" or whatever you named the machine in the left-hand sidebar and click "Power on this virtual machine".
