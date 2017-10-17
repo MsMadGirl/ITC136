@@ -231,5 +231,17 @@ xargs command builds a command from its standard input
   (backup files can end in ~)
 find / -user Ann | xargs -d "\n" rm
 
+tac command gives you the file in reverse order, line-by-line
+
+join (-t char, -i ignore case) combine files based on fields
+paste merge line-by-line
+expand (tabs into spaces) unexpand
+od (octal dump) show graphic, audio in octal
+sort (alphabetic ASCII; -f ignore case) (-n number, -r reverse, -k field)
+split (-l number of lines, default 1000 lines; must specify filename prefixaa, ab)
+tr SET1 SET1 < groggy translates characters in SET1 to SET2
+uniq (deletes duplicate lines) often used with sort
+
+
 
 
