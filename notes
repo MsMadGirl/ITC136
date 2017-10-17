@@ -242,6 +242,8 @@ split (-l number of lines, default 1000 lines; must specify filename prefixaa, a
 tr SET1 SET1 < groggy translates characters in SET1 to SET2
 uniq (deletes duplicate lines) often used with sort
 
+https://shapeshed.com/unix-join/
+
 
 
 
