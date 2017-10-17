@@ -1,4 +1,4 @@
-/9Notes
+Notes
 
 9/25/2017
 Documenting a new VM:
@@ -223,5 +223,13 @@ pipes go from left to right
 
 
 10/16 Notes
+
+Pipes redirect standard output of the dirst program to the standard input of the second program
+xargs command builds a command from its standard input
+  find ./ -name "*~" | xargs rm
+  Find in current directory and its subdirectories by name any filename that ends in ~ then pipe to xargs (so system will not choke) which calls rm
+  (backup files can end in ~)
+find / -user Ann | xargs -d "\n" rm
+
 
 
