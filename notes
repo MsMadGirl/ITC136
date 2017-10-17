@@ -141,6 +141,87 @@ Two types of variable used to bash shell:
 Environmental variables (ex: PATH and HOME) - used by bash when interpreting commands and performing tasks
 Local variables are often associated with used-based tasks
 
+10/11/2017
+To do -get ready for a quiz
+Relative path to move up
+Absolute to move down
 
+Top level directories know these
+
+Setting environmental variables in bash using assignment 
+operator (=) & export
+
+
+metasyntactic variables - look this up for fun
+
+$x=foo
+$echo $x $foo
+
+To export to another shell do this:
+export Y=foo
+sh enter
+echo $Y
+
+See where we are now
+$ echo $SHELL
+/bin/bash
+$ exit out back to bash
+
+unset Y To remove the variable 
+
+Always make a backup before you edit a config file. Or any file for that matter
+nbrown@ubuntu:~$ PS1="Frog: "
+Frog: 
+Example of protecting white space after a :
+exit 
+
+
+env gives a list of environmental variables
+
+Stdin = 0 standard input
+stdout = 1 standard output
+stderr = 2 standard error
+Check for the file purple:
+find / -name purple
+To not display standard error message on screen: 
+stderr 2> /dev/null instead of displaying on screen redirect it to dev/null.
+
+Redirection Operators (look these up)
+
+cat will read a file or create one if it does not exist
+nbrown@ubuntu:~$ cat > green
+Trees are green. Here we added a sentence to the file
+nbrown@ubuntu:~$ cat green
+Trees are green.
+nbrown@ubuntu:~$ 
+
+End of file command is ctrl d
+
+What is ASCII? My computer speaks ASCII. Machine language.
+Represents all the numbers and letters of the alphabet
+
+motd message of the day:
+
+nbrown@ubuntu:~$ find / -name motd 2> /dev/null
+/usr/share/doc/util-linux/examples/motd
+/usr/share/base-files/motd
+
+motd is used to display messages upon login. Legal protection would be one reason to use.
+
+| 
+A user wants the script NAME1 to process the contents of the file NAME2, then send the output to the program NAME3
+
+A name1 | name2 > name3
+B name1 <name2 | name3
+C name1 > name2 | name 3
+D name1 
+
+Lx3 brain dump
+
+pipes go from left to right
+
+
+
+10/16 Notes
 
 
