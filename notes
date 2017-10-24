@@ -244,6 +244,74 @@ uniq (deletes duplicate lines) often used with sort
 
 https://shapeshed.com/unix-join/
 
+10/23/17
+
+Processing text with filters
+
+cat a.txt b.txt > both.txt (-n number lines, -b number only non-blank lines)
+tac reverse cat
+noin (-t char, -i ignore case) combine files based on fields
+paste merge line-by-line
+expand (tabs into spaces) unexpand
+od (octal dump) - show graphic, audio in octal numbers
+sort (alphabetic ASCII; -f ignore case) (-n number, -r reverse, -k field)
+split (-i number of lines, default 1000 lines; must specify filename prefix)
+tr SET1 SET2 < groggy translatases characters in SET1 to SET2
+fmt formatting -- default - lines to 75 characters wide
+nl number lines
+pr file.txt format file to print in line printer - 80 character line
+cat -n /etc/profile | pr -d |lpr send contents of /etc/profile with numbered lines, then pipe to format print in double-spaced lines, and finally pipe to actually print the file
+
+cat /etc/shells to see list of available shels
+head /etc/group default is first 10 lines of file (-n number)
+tail /var/log/messages displays last lines of fils -f or --follow tail keeps file open & displays new lines as they are added to track logs
+  -pid=[pid] stop tracking (from -f) when rocess with the specified pid terminates
+less large.txt /keyword then / + enter searches ahead (or n alone; or N alone or ? searches in reverse) page display
+  g17 moves down to line 17
+  q to exit
+  h internal help, q goes back to less
+  q use as final command in a pipeline
+more large.txt used by Unix, can't search backwards
+less is more than more
+
+process -- smallest unit that can be run in a processor cycle
+
+File-Summarizing Commands: cut
+by byte (-b list), character (-c list), field (-f list, -d char)
+Specify by a single number (3), by closed range of numbers (2-3), by an open range (-3 or 3-)
+Used in scripts to extract data from another cmd's output
+ifconfig eth0 | grep Hwaddr | cut -d " " -f 11 (" " = space as delimiter)
+eth0 = ethernet
+cat /etc/passwd | grep yourusername | cut -d: -f 1,7
+
+wc file.txt
+308       2343      15534      file.txt
+newlines  word      bytes
+For ASCII files, character and byte counts will be equal
+
+Regular Expressions (regexp) - text patterns (basic & extended)
+
+Alphabetic string - match any string of the same size or longer that contains the regexp
+Non-alphabetic characters trigger advanced match rules
+bracket expressions - characters in [] square brackets- match any ONE character in brackets b[aeiou]g = bag, beg, big, bog, bug
+Range expressions - a[2-4]z matches a2z, a3z, a4z
+  a[^1-9]z = abz, akz; ^1-9 = matches any non-number (may also have numbers too)
+Any single character - dot (.) represents and *one* character except newline: a.z = a2z, ahz, etc r..d = reed, road, read, etc
+Repetition operator of extended regexp:
+asterisk = zero or more match
+plus sign = 1 or more
+question mark = 0 or 1
+.* matches any substring
+pipe | matches multiple possible strings - OR operator
+parenthesis around subexpressions
+backslash escape character 
+Basic regexp - text string that describe a particular search pattern
+Extended regexp - metacharacters have meaning
+
+grep - global regular expression parser
+grep searches for files that contain a specified string, returns filename &
+---i cannot keep up---look up grep flags and options---
+
 
 
 
