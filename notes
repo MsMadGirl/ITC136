@@ -312,6 +312,87 @@ grep - global regular expression parser
 grep searches for files that contain a specified string, returns filename &
 ---i cannot keep up---look up grep flags and options---
 
+To do:
+Touch Command:
+touch bubble  (creates a no content file)
+ls -la b* (look at the file to confirm it’s empty)
+
+grep in more depth
+ps ax | grep xterm know this for the cert
+ps x | grep xterm try this too. First number changes
+    Get all the processes running and pipe thru grep to find PID for string xterm
+Find out what a and x do
+ps ax  just run this
+man ps
+-f -e -i  (learn for grep options)
+
+cat >> bubble (then edit your file)
+
+sed  means screen editor
+
+Figure out how to look at the battle
+
+Make a back up:
+cp battle battle.bak (we made a backup copy)
+cp battle battle~
+
+sed ‘s/MINE/MY/’ battle >betterbattle
+
+sed ‘s/MINE/MY/gi ’ battle >betterbattle fix this
+
+
+On the test:
+Managing Files
+Linux is built to handle multi users.
+Filename conventions
+Filenames are case sensitive
+You can use spaces in the filename, but you have to escape the spaces. (By convention use no spaces or use underscores or camelcase etc.)
+Camelcase ok
+All caps are ok
+255 char or bytes can be used for a filename
+Backup files naming convention is to end the filename with ~ or .bak
+Special char are ok. ? / backticks
+Don’t use forward slashes 
+Dots are ok
+Wildcard expansion (globbing)
+
+Directory Commands
+Most of the commands that apply to files also apply to directories. In particular, ls, mv, touch, and ln all work with directories, with the limitations mentioned earlier. The cp command also works with directories, but only when you use a recursion option, such as -r.
+
+Create a tree structure directory
+Remove a directory (try it)
+mkdir
+mkdir [options] directory-name(s) most often used without options.
+
+rmdir use caution!
+When you're deleting an entire directory tree filled with files, you should use rm -R or rm -r rather than rmdir. This is because the rmdir command can delete only an empty directory.
+
+
+rm -r /grape/*
+rm -r /grape
+ls -F /dev 
+@ symlink
+hardlinks 
+cp -i
+cp -R
+
+
+10/30/2017
+
+cp from filename to filename or directory
+cp bibble grape/peel/seed/
+  -keeps unchanged original file in its original location and creates a copy in subdirectory
+  -trailing slash means it's a directory. no trailing slash makes a file.
+cp -i  interactive, prompt for confirmation before overwrite existing file
+cp -R recursive from directory to directory
+
+mv ./bib ./gribble if source and desination filenames are in the same dir, it will rename the file and delete original file bib
+mv ./gribble ./desk/grabble if source and destin are in diff dir it will send the original source file to new location with new name and original file is deleted
+may move multiple files into one new destination
+move or rename files and directories
+if on one filesustem - simply rewrite dir entries -- fast
+if want to rename  file or directory while moving, simply give it a new name
+
 
 
 
