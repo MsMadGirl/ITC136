@@ -393,6 +393,41 @@ move or rename files and directories
 if on one filesustem - simply rewrite dir entries -- fast
 if want to rename  file or directory while moving, simply give it a new name
 
+---missed a bunch, get from nicole---
+
+tarring collects many files into one larger file (archive):
+  For distribution by email attch - distribute source code
+  for archiving or storing
+    file.tar uncompressed tar archive file (tape archive)
+Tar preserves file system info
+tarball - compressed archive
+gzip, bzip2, xz, etc will compress tar file as a whole, smaller but if one error, all may be lost
+compressed file may have 1 or 2 extensions: .tar.gz, or .tgz or .tar.bz2 etc (linux kernel is compressed with .xz -- best)
+linux commands zip unzip    linux supports RAR, stuffit
+
+zmore and zcat both fisplay the contents of compressed files without decompressing them
+sometimes the order of option matters
+some version of tar require that f file option be followed immediately by a space and name of tar file to be created or extracted
+Some versions of tar require single dash before option string
+(-cvf) create archive, verbosely, archive filename
+t lists archive's contents
+z gzip (process archive thru gzip to compress OR uncompress with gzip)
+x extract files from archive
+j compress archive with bzip2
+
+tar -czvf higher.tgz high fern belle
+compresses three files
+  create (-how) TO.tgz FROM
+tar tzf archive | less
+tar -zxf archive
+tar xvf tribble.tar   extracts from archive file
+  tribble.tar, lists files verbosely
+To uncompress the file update.tar.gz
+  tar -xzf update.tar.gz   -C /home/student/untar
+  tar changes (-C) to source loction which is different from destination locations and extracts the files (unpacks archive) from update.tar.gz and processes archive through gzip to uncompress
+May use pipe to connect compression tool to tar when extracting
+gzip -c tarball.tgz | tar x v (uncompress tarball.tgz)
+
 
 
 
