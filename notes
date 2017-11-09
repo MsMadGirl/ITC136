@@ -428,6 +428,73 @@ To uncompress the file update.tar.gz
 May use pipe to connect compression tool to tar when extracting
 gzip -c tarball.tgz | tar x v (uncompress tarball.tgz)
 
+------************Insert notes from 11/1 and 11/6 here**********---------
+
+
+NOTES 11/8
+
+ln -s realfile symlink    creates aSymbolic link (soft link) - contents of a file point to another filename which is linked to or real file
+ls -li symlink -> realfile
+ls -F @ -     Symlink - shortcut or pointer to diff file
+Special file type, begin with l in ls
+Different inodes - can be on separate filesystems or partitions
+Slower than hardlink; beed more I/O to access file & more storage for softlink's data
+When you try to access the symlink you are really accessing the linked-to file
+When symlink file is changed, change is to data in target or real file (diff file size)
+If target file is rm, symlink stops working
+Symlinks always have 777 permissions that apply to itself (users see name of real "linked-to" file), not real file
+Permissions of softlink are irrelevant; it is permissions of target file that determine access
+ln -s green frog (symlink frog will point to real file green)
+  (files will have different inode numbers)
+If the original file is deleted, the symlink will no longer work
+
+. current dir
+.. parent dir
+Directory contains two special files, . and ..
+. file contains the inode # of the directory file in which the entry has been made
+. is a hardlink to the file that implements the current directory
+.. file contains inode # of parent directory
+.. is a hardlink to the file that implements parent dir
+
+UID user
+GID (root may change GID of file to a group that owner of file is not a member of)
+drwxr-xr-x ariel staff 512 Jun 13 16:19 Mail
+Each file has an individual owner and a group it is associated with (file's group or the group owner)
+Files can be owned by accounts that are not ordinary user accounts (such as a server)
+Delete user account - only account name is deleted - system now uses numbers in place of names in ls output (id shows which user account you are using & which group you can use)
+generated account names ending in d are daemons which are services
+files can be owned by daemons
+Permission string 10 bits last is sticky bit, rarely shows up
+rwsr-xr-x s is a special permission, lets you do things like write to a file you don't normally have permission to, like changing your password
+usually about /etc/passwd
+special permission can be assigned to user, group, or other
+rwxr-xr-s s is sticky bit
+superuser or root can access ANY file, no matter permissions
+
+permissions or modes r=4, w=2, x=1 (octal) based on ownership (UID - effective)
+user/u/you/owner  group/g  others/o/world
+r - read file, copy, list contents of dir
+w - write file
+x - execute file or cd or traverse dir
+777 is universal rwx
+
+to create new files, delete files, or rename files - need w & x permissions to dir but not file
+execute to all parent dirs to cd into dirs (make current working directory) or read or search
+Users typically only have this type of permission in their home dir and its subdirs
+-r--rw-rwx 1 jane staff 999 apr 10 2017 /home/jane/test
+once user ownership has been established, only the user owner's permissions apply (jane, the owner, has fewer permissions than other members of staff)
+SUID or set user id = 4 change user IS on execution
+  process will have the same rights as owner of the file (often root = SUID root), not actual user DANGER
+  -rwSr-xr-x = 4755 an S in user group is a 4 at the front of the mode, then the 1 for the execute bit
+SGID or set group ID = 2 change group ID on execution
+  process will have the same rights as the group of owner of file, not the actual user DANGER
+  -rwx-r-Sr-x = 2755 S in group group is a 2 at the front of the mode
+Sticky bit = 1 prevents files in a directory from being deleted except by owner of file, directory's owner, or root
+drwxr-xr-t or 1755
+special bits add
+drwsr-sr-t is 7755
+
+
 
 
 
