@@ -395,6 +395,67 @@ if want to rename  file or directory while moving, simply give it a new name
 
 ---missed a bunch, get from nicole---
 
+cp from filename to filename keeps unchanged original. The cp command also works with
+directories, but only when you use a recursion option, such as -r.
+cp -u update if our file is newer than the target file
+cp -f forcibly overwrites the target file
+mv move command to rename files/directories. If the destination and source directories ….
+Think about how this is different than cp. 
+Make utility
+Archived Files - A file-archiving tool collects a group of files into a single package file,
+called an archive.
+
+tar  is a utility that stands for “tape archiver”.
+tarballs A tarball is an archive file created by tar and typically compressed with gzip, xz, or 
+bzip2. 
+cpio this is another archive command
+Whenever you run tar, you use only one command with one or more qualifiers. Collectively, the
+commands and qualifiers are called options. Historically a dash (-) would be put in front of tar options. However, the dash is no longer needed and on some Linux distributions
+generates an error!
+
+Most commonly used tar commands.:
+c   create archive
+x   extract archive
+t   list archive
+
+Most useful qualifiers:
+g Perform incremental backup
+p Keep permissions
+z Use gzip compression
+j Use bzip2 compression
+J Use xz compression
+v Be verbose
+
+syntax for the tar command is as follows!
+tar [options] destination/tar_file_name files-to-archive
+
+zip 
+These commands are often used with tar. Files compressed with these utilities have .gz, .bz2, or .xz filename extensions
+Compressed archives sometimes use their own special extensions, such as .tgz for a gzip-compressed tarball or .tbz for one compressed with bzip2.
+
+gzip  provides the least compression
+bzip2 provides improved compression
+xz  provides newest and best compression linux kernel is now compressed with .xz
+unzip 
+zcat zmore read files without uncompressing
+-cvf
+t lists the contents of the archive
+z gzip
+x extract the files from the archives
+j
+Compress to from
+tzf 
+tar tzf archive | less
+Review tar test questions carefully
+Play with these…..
+When untarring destination directory must be created beforehand!
+
+touch bibble to create the file bibble
+How can you see the timestamp and size in one command? Look up timestamp numbers.
+ls -la pencil touching any file updates the timestamp,defaults to current time
+
+----end nicole----
+
 tarring collects many files into one larger file (archive):
   For distribution by email attch - distribute source code
   for archiving or storing
@@ -430,6 +491,64 @@ gzip -c tarball.tgz | tar x v (uncompress tarball.tgz)
 
 ------************Insert notes from 11/1 and 11/6 here**********---------
 
+11/01/2017
+To do: We are in chap 4 now
+Know for quiz. When to use a dash or no dash. Tar is a weird command. Not having a dash is usually not the problem.
+Know the order of the switches f filename has to be last. 
+
+Syntax to from 
+-C 
+zcat 
+
+Try a new file frest and play with tar gzip etc.
+gzip -d filename.tgz
+cpio copy input (out of archive) to directory tree output not on test) -i extracts -o archives not on the test!
+gunzip when would you use this...
+dd  not an archiving tool but  can copy an entire partition or disk into a file and vice versa.
+ tool but can be used to move  (data description nicknamed destroy disc) not on the test can be used to clone.
+Sector- a pie shaped slice of a hard drive Hard disks are built from platters, each of which is broken into sectors
+into tracks, which are further broken into sectors.
+
+inodes information node
+ls -la to find the owner of the file
+Multiple Filenames for the same data: Links
+
+11/06/2017
+To do:
+
+To display your hard link count in your home dir type
+ls -la
+mkdir  -p fruit/apple/banana/
+ls -li display includes inode number
+Filenames are not included in the inode - an inode can have multiple file links. Confirm by looking at the inode number, it should be the same for linked files
+ln 
+Removing files  that have hard links all have to be rm or they would not be removed.
+cat >> battle now add war is hell to the end of the file. Ctrl d then cat battle to confirm.
+find -inum to locate other files with the same inode number
+find -inum (inode number)
+Hard links prevent a single point of failure
+Hard links vs soft links
+
+Redirect standard error to dev null - refresher practice
+
+syntax:
+Sim link
+
+ln -s highway twinkle
+    ls -li
+    twinkle -> highway
+ls -F  classify
+@
+=
+Sockets - special files google sockets
+Soft links have different inode numbers
+ls -la will show a leading l in the permissions column
+
+Simlinks are pointers to your file always have 777 permissions rwxrwxrwx - that apply to itself.
+Quiz next week
+
+
+------************Insert notes from 11/1 and 11/6 here**********---------
 
 NOTES 11/8
 
