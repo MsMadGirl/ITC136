@@ -613,6 +613,46 @@ drwxr-xr-t or 1755
 special bits add
 drwsr-sr-t is 7755
 
+11-22-17
+
+uname -a  to learn all basics about kernel & system
+-n node or host name on network
+-s or kernel name
+-v kernel build date & time, not version
+-r kernel release = actual version
+
+ps [options] (process status) like task manager/activity monitor
+often used to determine why comp is running slowly
+options come in 3 formats
+Unix 98 - single characters, may be grouped together and are preceded by a single dash -
+BSD - single character, may be grouped, no dash
+BNU long - multicharacter, never grouped, preceded by two dashes
+When grouped, options do not need spaces
+ps --help
+By default ps only displays processes run from its own terminal
+ps -Ae al processes on system
+ps x all process owned by user who issued ps
+ps -u sue --forest all processes owned by username or UID and display user programs launched from shells
+  forest because it has trees
+ps u expands info displayed (not -u or U)
+Output of ps - heading line gives meaning of each column
+ps is a snapshot, top is dynamic
+PID is used to modify or kill a process
+PPID parent process id
+TTY not all processes have TTY #s to identify a terminal.
+  daemons and X programs do not
+  Text-mode programs have TTY#s that point to a console, xterm, or remote login session
+ CPU time (TIME - total amount of CPU time used &
+  %CPU - how much CPU time this process uses as it executes) - help find runaway processes
+CPU priority - NI lists priority codes, default = 0,
+  positive values = reduced priority
+  negative values = incresed priority
+Memory use - RSS - resident set size - memory used by program & its data
+  & %MEM (both also help find runaway programs)
+  
+
+  
+
 
 
 
