@@ -650,7 +650,9 @@ CPU priority - NI lists priority codes, default = 0,
 Memory use - RSS - resident set size - memory used by program & its data
   & %MEM (both also help find runaway programs)
   
+11/27/17
 
+prepare for vi
   
 
 
