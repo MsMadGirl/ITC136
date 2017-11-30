@@ -653,6 +653,58 @@ Memory use - RSS - resident set size - memory used by program & its data
 11/27/17
 
 prepare for vi
+
+
+11/29/17
+
+vi opens in viewing/normal/command mode to perform operations 
+  (navigations, searching, saving, editing)
+  Open new file/empty file, screen with tildes down the left side
+  Bottom of screen, filename is shown, if you opened existing file, & size of file
+  "filename" 23 lines, 95 character
+  use cursor or navigation keys (hjkl) to scroll
+to begin editing/entry/insert mode to add text
+  Press i to insert text before cursore or l for beginning of line
+  a for append after curson
+  A to append at end of line
+  o for open new line below
+  O to open a new line above
+Esc to toggle out of insrt mode and int cmd mode
+Ex mode to save file or run outside cmdl from command mode,
+  type :cmd - usually single letters preceded by : (colon commands)
+COmmand mode - most letters, or short sequences of letters, tht you type 
+
+[count] command [where[
+9x will delete 9 characters under the cursor
+Copy of yank yy (screen does not change)
+delete to right of cursor x
+delete to left of cursor y
+delete a line dd 16dd  16u to undo
+delete a word dq 32dw
+run a shell command :sh   exit to return to vi
+text search /
+$vimtutor to practice using vi
+:set ignorecase or :set ic
+:set noic
+:!wc -w
+:!command to execute shell command within vi
+:r include the contents of an old file in an existing file
+p put/paste after cursor or after line
+P put/paste before cursor or before line
+Change case - use ~ in cmd mode - place tilde on first character to change and 
+  press ~ REPEATEDLY UNTIL DONE
+UNDO - U IN CMD MODE
+/text to search forward
+?text searches backward
+cw change word, cc change line, both from cmd mode
+go to line 27 27G
+:set number to get line numbers
+H goes o home at top line of screen
+L to bottom of screen
+Replace globally :%s/original/replace
+  12,15s/original/replace to replace on line 12-15
+  
+
   
 
 
